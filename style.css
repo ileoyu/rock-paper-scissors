@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Share Tech', sans-serif;
+    box-sizing: border-box;
+}
+.overlay-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #1d1d1d;
+  }
+  
+h1 {
+    font-size: 7em;
+    padding: 0;
+    margin: 0.2em;
+    color: transparent;
+    -webkit-text-stroke: .025em #8f9095;
+    font-weight: 300;
+}
+
+.body-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+    .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+        .leftside {
+            background-color: #F3F2EE;
+        }
+
+        .rightside {
+            background-color: #EEEBE8;
+        }
+
+        .player-wrapper,
+        .bot-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .RPS {
+            display: flex;
+            flex-direction: column;
+            margin: 2em;
+        }
+            .text {
+                align-self: center;
+                margin-bottom: 2em;
+                color: #8F9095;
+                font-size: 1.2em;
+                padding: 0;
+
+            }
+            .icons-container {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 1.5em;
+                opacity: 100%;
+            }
+
+
+
