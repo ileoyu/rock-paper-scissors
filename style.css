@@ -120,6 +120,46 @@ h1 {
                 align-items: flex-start; 
                 flex-wrap: wrap;
             }
+
+            #player-rock {
+                opacity: 0.5;
+            }
+            #player-rock:hover {
+                opacity: 1;
+            }
+            #player-paper {
+                opacity: 0.5;
+            }
+            #player-paper:hover {
+                opacity: 1;
+            }
+            #player-scissors {
+                opacity: 0.5;
+            }
+            #player-scissors:hover {
+                opacity: 1;
+            }
+
+            #bot-rock,
+            #bot-paper,
+            #bot-scissors {
+                user-select: none;
+                opacity: 0;
+                position: absolute; 
+                top: 0; 
+                left: 50%; 
+                transform: translate(-50%);
+            }
+
+            #bot-rock.active,
+            #bot-paper.active,
+            #bot-scissors.active {
+                opacity: 1;
+                position: absolute; 
+                top: 0; 
+                left: 50%; 
+                transform: translate(-50%);
+            }
             
             #resetBtn {
                 display: none;

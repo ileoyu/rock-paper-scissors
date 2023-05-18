@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //choices
     const playerChoices = document.querySelectorAll('.playerChoices > div');
+    const computerChoices = document.querySelectorAll('.computerChoices > div');
     const resetBtn = document.getElementById('resetBtn');
     let playerChoice = '';
     let computerChoice = '';
@@ -35,12 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             computerChoice = getComputerChoice();
             result = determineScore(playerChoice, computerChoice);
             determineWinner(playerScore, computerScore);
-            console.log(playerChoice);
-            console.log(computerChoice);
-            console.log(result);
-            console.log(playerScore);
-            console.log(computerScore);
-
         })}
         
     // random computer choice 
@@ -48,14 +43,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function getComputerChoice() {
         const choices = ['rock', 'paper', 'scissors'];
         const randomIndex = Math.floor(Math.random() * choices.length);
-        return choices[randomIndex];
-    }
+        const computerChoice = choices[randomIndex];
+      
+        // Add active class to the corresponding element
+        const computerChoiceElement = document.querySelector(`#bot-${computerChoice}`);
+        computerChoiceElement.classList.add('active');
+      
+        // Remove active class after a delay
+        setTimeout(() => {
+          computerChoiceElement.classList.remove('active');
+        }, 500);
+      
+        return computerChoice;
+      }
 
     // determine score
 
     function determineScore(playerChoice, computerChoice) {
         if (playerChoice === computerChoice) {
-            return "It's a tie!";
         }
 
         if (playerChoice === "rock") {
@@ -63,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 computerScore++;
                 computerScorevalue.textContent = computerScore;
-                return "Computer wins! Paper beats Rock.";
+                
             } else {
                 playerScore++;
                 playerScorevalue.textContent = playerScore;
-                return "User wins! Rock beats Scissors.";
+                
             }
         }
 
@@ -76,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 computerScore++;
                 computerScorevalue.textContent = computerScore;
-                return "Computer wins! Scissors beats Paper.";
+                
             } else {
                 playerScore++;
                 playerScorevalue.textContent = playerScore;
-                return "User wins! Paper beats Rock.";
+                
             }
         }
 
@@ -88,11 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (computerChoice === "rock") {
                 computerScore++;
                 computerScorevalue.textContent = computerScore;
-                return "Computer wins! Rock beats Scissors.";
+                
             } else {
                 playerScore++;
                 playerScorevalue.textContent = playerScore;
-                return "User wins! Scissors beats Paper.";
+                
             }
         }
     }
@@ -138,6 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
         //reset everything 
         playerScore = 0;
         computerScore = 0;
+
+        
         playerScoreboard.classList.remove('active');
         playerScorevalue.classList.remove('active');
         computerScoreboard.classList.remove('active');
@@ -149,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // display player choices
         playerChoices.forEach(icon => {
             icon.style.display = 'block';
+
         });
 
 
