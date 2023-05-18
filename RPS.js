@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove active class after a delay
         setTimeout(() => {
           computerChoiceElement.classList.remove('active');
-        }, 500);
+        }, 1000);
       
         return computerChoice;
       }
