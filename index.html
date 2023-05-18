@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="RPS.js"></script> -->
+    <!-- fontawesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="RPS.js"></script>
 </head>
 <body>
 
@@ -17,26 +19,30 @@
           
         <div class="side leftside">
             <div class="player-wrapper">
-                <div class="player">
-                    <h1>player</h1>
-                </div>
-                <div class="score">
-                    <h1>0</h1>
-                </div>
+                <span class="player-scoreboard">player</span>
+                <span class="player-scorevalue">0</span>
                 <div class="RPS">
                     <div class="text">
                         <p>choose your weapon</p>
                     </div>
                     <div class="icons-container">
-                        <div class="rock">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/rock.png">
+                        <div class="playerChoices">
+                            <div id="player-rock">
+                                <img class="rps-icons" src="/icons/rock.png">
+                            </div>
+                            <div id="player-paper">
+                                <img class="rps-icons" src="icons/paper.png">
+                            </div>
+                            <div id="player-scissors">
+                                <img class="rps-icons" src="/icons/scissors.png">
+                            </div>
                         </div>
-                        <div class="paper">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/paper.png">
+                        <div class="restart">
+                            <button id="resetBtn">
+                                <i class="fa-solid fa-arrow-rotate-left" id="reset"></i>
+                            </button>  
                         </div>
-                        <div class="scissors">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/scissors.png">
-                        </div>  
+                        
                     </div>
                 </div>
             </div>
@@ -44,25 +50,21 @@
         
         <div class="side rightside">
             <div class="bot-wrapper">
-                <div class="player">
-                    <h1>bot</h1>
-                </div>
-                <div class="score">
-                    <h1>0</h1>
-                </div>
+                <span class="computer-scoreboard">bot</span>
+                <span class="computer-scorevalue">0</span>
                 <div class="RPS">
                     <div class="text">
                         <p>bot's chosen weapon</p>
                     </div>
-                    <div class="icons-container">
-                        <div class="rock">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/rock.png">
+                    <div class="computerChoices">
+                        <div id="bot-rock">
+                            <img class="rps-icons" src="/icons/rock.png">
                         </div>
-                        <div class="paper">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/paper.png">
+                        <div id="bot-paper">
+                            <img class="rps-icons" src="/icons/paper.png">
                         </div>
-                        <div class="scissors">
-                            <img class="rps-icons" src="../rock-paper-scissors/icons/scissors.png">
+                        <div id="bot-scissors">
+                            <img class="rps-icons" src="/icons/scissors.png">
                         </div>
                         
                     </div>
@@ -72,7 +74,6 @@
         
             
     </div>
-    
     
     
 </body>

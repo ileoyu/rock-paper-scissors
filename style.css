@@ -15,7 +15,7 @@ body {
     transform: translate(-50%, -50%);
     font-size: 2em;
     color: #1d1d1d;
-  }
+}
   
 h1 {
     font-size: 7em;
@@ -26,6 +26,34 @@ h1 {
     font-weight: 300;
 }
 
+.computer-scoreboard,
+.player-scoreboard,
+.computer-scorevalue,
+.player-scorevalue {
+    font-size: 7em;
+    padding: 0;
+    margin: 0.2em;
+    color: transparent;
+    -webkit-text-stroke: .025em #8f9095;
+    font-weight: 300;
+}   
+
+.computer-scoreboard.active,
+.player-scoreboard.active,
+.computer-scorevalue.active,
+.player-scorevalue.active {
+    font-size: 7em;
+    padding: 0;
+    margin: 0.2em;
+    color: green;
+    -webkit-text-stroke: .025em green;
+    font-weight: 300;
+}   
+
+.no-stroke {
+    -webkit-text-stroke: none;
+  }
+  
 .body-wrapper {
     display: flex;
     justify-content: center;
@@ -58,13 +86,15 @@ h1 {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .RPS {
             display: flex;
             flex-direction: column;
             margin: 2em;
-        }
+        }   
+        
             .text {
                 align-self: center;
                 margin-bottom: 2em;
@@ -74,11 +104,50 @@ h1 {
 
             }
             .icons-container {
+                
+                position: relative;
+                
+            }
+
+            .playerChoices,
+            .computerChoices {
+                height: 10em;
                 display: flex;
                 justify-content: space-evenly;
+                position: relative;
                 gap: 1.5em;
                 opacity: 100%;
+                align-items: flex-start; 
+                flex-wrap: wrap;
             }
+            
+            #resetBtn {
+                display: none;
+            }
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: black;
+                cursor: pointer;
+                position: absolute; 
+                top: 0; 
+                left: 40%; 
+                transform: translate(-45%);   
+            }
+            
+            button i {
+                font-size: 1.5rem;
+                position: absolute;
+                align-self: center;
+                text-align: center;
+            }
+
+    
+
+            
+            
+    
 
 
 
